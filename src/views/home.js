@@ -4,9 +4,18 @@ import { Helmet } from 'react-helmet'
 
 import FeatureCard from '../components/feature-card'
 import Question1 from '../components/question1'
+import { useHistory } from 'react-router-dom'; // Import useHistory
+
 import './home.css'
 
 const Home = (props) => {
+  const history = useHistory(); // Hook for navigation
+
+  const navigateToUpload = () => {
+
+    history.push('/upload'); // Use the route you defined for UploadPage
+  };
+
   return (
     <div className="home-container">
       <Helmet>
@@ -161,7 +170,7 @@ const Home = (props) => {
               </span>
             </span>
             <div className="home-btn-group">
-              <button className="buttonFilled">Start Now</button>
+            <button className="buttonFilled" onClick={navigateToUpload}>Start Now</button>
               <button className="buttonFlat">Learn More →</button>
             </div>
           </div>

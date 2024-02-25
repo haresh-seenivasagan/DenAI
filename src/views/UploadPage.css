@@ -1,0 +1,148 @@
+.medical-diagnosis {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-upload-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.image-upload {
+  flex-basis: calc(33.333% - 20px);
+  border: 2px dashed #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  position: relative;
+}
+
+.image-upload input[type="file"] {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+.image-upload label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border: none;
+}
+
+.image-preview {
+  margin-bottom: 10px;
+  margin-top : 50px;
+  margin-left: 70px;
+  width: 100%; /* Adjust width as necessary, could be 100% or a fixed width */
+  height: auto; /* This ensures the aspect ratio is maintained */
+  max-height: 200px; /* Example max height */
+  object-fit: contain; /* This prevents the image from stretching and makes it contained within the element's box */
+  border: 1px solid #ddd; /* Optional: adds a subtle border around the image */
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); /* Optional: adds a slight shadow for some depth */
+  margin-bottom: 10px; /* Adds some space below the image */
+  border-radius: 4px; /* Optional: rounds the corners of the image */
+}
+
+.symptom-textarea {
+  margin-top: 250px;
+}
+
+.symptom-textarea textarea {
+  width: 100%;
+  padding: 15px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  height: 150px;
+  resize: vertical;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.image-preview {
+  width: fit-content; /* Adjust width as necessary, could be 100% or a fixed width */
+  height: auto; /* This ensures the aspect ratio is maintained */
+  max-height: 200px; /* Example max height */
+  object-fit: contain; /* This prevents the image from stretching and makes it contained within the element's box */
+  border: 1px solid #ddd; /* Optional: adds a subtle border around the image */
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); /* Optional: adds a slight shadow for some depth */
+  margin-bottom: 10px; /* Adds some space below the image */
+  border-radius: 4px; /* Optional: rounds the corners of the image */
+}
+/* .image-upload .image-preview-container {
+  position: relative;
+  display: inline-block; /* or flex depending on your layout }*/
+  */
+
+.image-upload .image-preview {
+  display: block; /* Replace existing styles */
+  max-width: 100%; /* Ensures the image is not bigger than its container */
+  height: auto; /* Maintains the aspect ratio */
+  margin-bottom: 10px; /* Adds some space below the image */
+}
+
+.image-upload .remove-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+span.ant-upload-wrapper {
+  display: inline-flex; /* Make the wrappers flex items */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin: 0; /* Reset any default margins if needed */
+}
+
+/* Additional styles to ensure consistent sizing and spacing */
+.ant-upload {
+  border: 1px dashed #d9d9d9; /* Example border style */
+  border-radius: 4px; /* Rounded corners */
+  padding: 16px; /* Padding inside the upload area */
+  width: 100%; /* Full width of the parent */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* You can also add media queries if you need to handle responsive layouts */
+@media (max-width: 768px) {
+  .image-upload-container {
+    flex-direction: column;
+  }
+}

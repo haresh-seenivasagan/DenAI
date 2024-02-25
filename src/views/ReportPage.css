@@ -1,0 +1,17 @@
+.json-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.json-item {
+    margin-bottom: 8px;
+}
+
+.json-key {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.json-value {
+    color: #0366d6; /* Or any other color you prefer */
+}
